@@ -1,0 +1,21 @@
+Script started on 2020-06-06 17:14:27-0700
+]0;bram@bram-VirtualBox: ~/ECE373/HW6[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373/HW6[00m$ sudo ./ledmon -s 0000:00:03.0 -L[18Pcode hw6_bl.c [4P.c_bl.c sudo ./ledmon -s 0000:00:03.0 -L[Ksudo ./ledmon -s 0000:00:03.0 -L[18Pcode hw6_bl.c [4P.c[K[2PCODE HWcode testbench.c [10Psudo su[2Pdmesgsudo sucode testbench.c [10PCODE HWcode hw6.c_bl.c sudo ./ledmon -s 0000:00:03.0 -L[Ksudo ./a.out
+[sudo] password for bram: 
+Sorry, try again.
+[sudo] password for bram: 
+Head: 0x0
+Tail: 0xa
+]0;bram@bram-VirtualBox: ~/ECE373/HW6[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373/HW6[00m$ sudo ./a.out
+Head: 0x0
+Tail: 0xd
+]0;bram@bram-VirtualBox: ~/ECE373/HW6[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373/HW6[00m$ sudo ./a.out
+Head: 0x0
+Tail: 0x0
+]0;bram@bram-VirtualBox: ~/ECE373/HW6[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373/HW6[00m$ sudo ./a.out
+Head: 0x0
+Tail: 0x3
+]0;bram@bram-VirtualBox: ~/ECE373/HW6[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373/HW6[00m$ sudo rmmod hw6
+]0;bram@bram-VirtualBox: ~/ECE373/HW6[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373/HW6[00m$ exit
+exit
+
+Script done on 2020-06-06 17:24:09-0700

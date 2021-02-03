@@ -1,0 +1,46 @@
+Script started on 2020-04-11 14:23:10-0700
+]0;bram@bram-VirtualBox: ~/ECE373/HW1[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373/HW1[00m$ sudo insmod hello.ko
+[sudo] password for bram: 
+insmod: ERROR: could not load module hello.ko: No such file or directory
+]0;bram@bram-VirtualBox: ~/ECE373/HW1[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373/HW1[00m$ make
+make -C /lib/modules/5.3.0-45-generic/build SUBDIRS=/home/bram/ECE373/HW1 modules
+make[1]: Entering directory '/usr/src/linux-headers-5.3.0-45-generic'
+Makefile:227: ================= WARNING ================
+Makefile:228: 'SUBDIRS' will be removed after Linux 5.3
+Makefile:229: 
+Makefile:230: If you are building an individual subdirectory
+Makefile:231: in the kernel tree, you can do like this:
+Makefile:232: $ make path/to/dir/you/want/to/build/
+Makefile:233: (Do not forget the trailing slash)
+Makefile:234: 
+Makefile:235: If you are building an external module,
+Makefile:236: Please use 'M=' or 'KBUILD_EXTMOD' instead
+Makefile:237: ==========================================
+  CC [M]  /home/bram/ECE373/HW1/hello.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/bram/ECE373/HW1/hello.mod.o
+  LD [M]  /home/bram/ECE373/HW1/hello.ko
+make[1]: Leaving directory '/usr/src/linux-headers-5.3.0-45-generic'
+]0;bram@bram-VirtualBox: ~/ECE373/HW1[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373/HW1[00m$ makesudo insmod hello.ko
+]0;bram@bram-VirtualBox: ~/ECE373/HW1[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373/HW1[00m$ tail /var/log/syslog
+Apr 11 14:16:34 bram-VirtualBox org.debian.apt[506]:   GLib.source_remove(id)
+Apr 11 14:16:34 bram-VirtualBox org.debian.apt[506]: /usr/lib/python3/dist-packages/aptdaemon/progress.py:491: Warning: Source ID 27 was not found when attempting to remove it
+Apr 11 14:16:34 bram-VirtualBox org.debian.apt[506]:   GLib.source_remove(id)
+Apr 11 14:16:34 bram-VirtualBox org.debian.apt[506]: 14:16:34 AptDaemon.Worker [INFO]: Finished transaction /org/debian/apt/transaction/e290703b7d56420f9d7abfbcd32c2617
+Apr 11 14:17:01 bram-VirtualBox CRON[28487]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Apr 11 14:19:24 bram-VirtualBox kernel: [ 4500.558751] hello: module verification failed: signature and/or required key missing - tainting kernel
+Apr 11 14:19:24 bram-VirtualBox kernel: [ 4500.559026] Hello, Kernel
+Apr 11 14:21:10 bram-VirtualBox kernel: [ 4605.740942] Goodbye, Kernel
+Apr 11 14:21:58 bram-VirtualBox dbus-daemon[506]: [system] Activating via systemd: service name='org.bluez' unit='dbus-org.bluez.service' requested by ':1.162' (uid=1000 pid=29299 comm="/snap/code/29/usr/share/code/code --no-sandbox typ" label="snap.code.code (complain)")
+Apr 11 14:24:34 bram-VirtualBox kernel: [ 4809.696269] Hello, Kernel
+]0;bram@bram-VirtualBox: ~/ECE373/HW1[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373/HW1[00m$ sy[Kudo rmmod hello
+]0;bram@bram-VirtualBox: ~/ECE373/HW1[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373/HW1[00m$ sudo rmmod hellotail /var/log/syslog
+Apr 11 14:16:34 bram-VirtualBox org.debian.apt[506]: /usr/lib/python3/dist-packages/aptdaemon/progress.py:491: Warning: Source ID 27 was not found when attempting to remove it
+Apr 11 14:16:34 bram-VirtualBox org.debian.apt[506]:   GLib.source_remove(id)
+Apr 11 14:16:34 bram-VirtualBox org.debian.apt[506]: 14:16:34 AptDaemon.Worker [INFO]: Finished transaction /org/debian/apt/transaction/e290703b7d56420f9d7abfbcd32c2617
+Apr 11 14:17:01 bram-VirtualBox CRON[28487]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Apr 11 14:19:24 bram-VirtualBox kernel: [ 4500.558751] hello: module verification failed: signature and/or required key missing - tainting kernel
+Apr 11 14:19:24 bram-VirtualBox kernel: [ 4500.559026] Hello, Kernel
+Apr 11 14:21:10 bram-VirtualBox kernel: [ 4605.740942] Goodbye, Kernel
+Apr 11 14:21:58 bram-VirtualBox dbus-daemon[506]: [system] Activating via systemd: service name='org.bluez' unit='dbus-org.bluez.service' requested by ':1.162' (uid=1000 pid=29299 comm="

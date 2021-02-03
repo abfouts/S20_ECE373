@@ -1,0 +1,15 @@
+Script started on 2020-04-05 17:07:43-0700
+]0;bram@bram-VirtualBox: ~/ECE373[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373[00m$ code far2Cel.c 
+]0;bram@bram-VirtualBox: ~/ECE373[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373[00m$ code far2Cel.c [5Pd ECE373/mkdir ECE373[7Pls -l[2Ppwdls -lmkdir ECE373[2Pcd ECE373/ode far2Cel.c [Kcode far2Cel.c [5Pd ECE373/mkdir ECE373[7Pls -l[2Ppwdls -lmkdir ECE373[2Pcd ECE373/ode far2Cel.c [Kgcc -g -o far2Cel.c [K[K[K far2Cel.c 
+]0;bram@bram-VirtualBox: ~/ECE373[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373[00m$ ./far2Cel 32
+Fahrenheit = 32.000000
+Celcius = 0.000000
+]0;bram@bram-VirtualBox: ~/ECE373[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373[00m$ ./far2Cel 32[K[K100
+Fahrenheit = 100.000000
+Celcius = 37.777779
+]0;bram@bram-VirtualBox: ~/ECE373[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373[00m$ ./far2Cel 100[K[K[K212
+Fahrenheit = 212.000000
+Celcius = 100.000000
+]0;bram@bram-VirtualBox: ~/ECE373[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373[00m$ exit
+
+Script done on 2020-04-05 17:08:39-0700

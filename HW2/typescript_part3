@@ -1,0 +1,99 @@
+Script started on 2020-04-22 18:06:32-0700
+]0;bram@bram-VirtualBox: ~/ECE373/HW2[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373/HW2[00m$ make
+make -C /lib/modules/5.3.0-46-generic/build SUBDIRS=/home/bram/ECE373/HW2 modules
+make[1]: Entering directory '/usr/src/linux-headers-5.3.0-46-generic'
+Makefile:227: ================= WARNING ================
+Makefile:228: 'SUBDIRS' will be removed after Linux 5.3
+Makefile:229: 
+Makefile:230: If you are building an individual subdirectory
+Makefile:231: in the kernel tree, you can do like this:
+Makefile:232: $ make path/to/dir/you/want/to/build/
+Makefile:233: (Do not forget the trailing slash)
+Makefile:234: 
+Makefile:235: If you are building an external module,
+Makefile:236: Please use 'M=' or 'KBUILD_EXTMOD' instead
+Makefile:237: ==========================================
+  CC [M]  /home/bram/ECE373/HW2/hw2.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /home/bram/ECE373/HW2/hw2.mod.o
+  LD [M]  /home/bram/ECE373/HW2/hw2.ko
+make[1]: Leaving directory '/usr/src/linux-headers-5.3.0-46-generic'
+]0;bram@bram-VirtualBox: ~/ECE373/HW2[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373/HW2[00m$ sudp ins[K[K[K[K[Ko insmod hw2.ko
+[sudo] password for bram: 
+]0;bram@bram-VirtualBox: ~/ECE373/HW2[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373/HW2[00m$ sudo cat/proc/devi[Kices
+sudo: cat/proc/devices: command not found
+]0;bram@bram-VirtualBox: ~/ECE373/HW2[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373/HW2[00m$ sudo cat/proc/devices /proc/devices
+Character devices:
+  1 mem
+  4 /dev/vc/0
+  4 tty
+  4 ttyS
+  5 /dev/tty
+  5 /dev/console
+  5 /dev/ptmx
+  5 ttyprintk
+  6 lp
+  7 vcs
+ 10 misc
+ 13 input
+ 21 sg
+ 29 fb
+ 89 i2c
+ 99 ppdev
+108 ppp
+116 alsa
+128 ptm
+136 pts
+180 usb
+189 usb_device
+204 ttyMAX
+226 drm
+241 Abram_Fouts_HW2
+242 aux
+243 hidraw
+244 bsg
+245 watchdog
+246 ptp
+247 pps
+248 cec
+249 rtc
+250 dax
+251 dimmctl
+252 ndctl
+253 tpm
+254 gpiochip
+
+Block devices:
+  7 loop
+  8 sd
+  9 md
+ 11 sr
+ 65 sd
+ 66 sd
+ 67 sd
+ 68 sd
+ 69 sd
+ 70 sd
+ 71 sd
+128 sd
+129 sd
+130 sd
+131 sd
+132 sd
+133 sd
+134 sd
+135 sd
+253 device-mapper
+254 mdp
+259 blkext
+]0;bram@bram-VirtualBox: ~/ECE373/HW2[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373/HW2[00m$ sudo mknod /dev/hw2char c 241 0
+]0;bram@bram-VirtualBox: ~/ECE373/HW2[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373/HW2[00m$ ls -l /dev/hw2char
+crw-r--r-- 1 root root 241, 0 Apr 22 18:07 [0m[40;33;01m/dev/hw2char[0m
+]0;bram@bram-VirtualBox: ~/ECE373/HW2[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373/HW2[00m$ gcc testbench.c 
+]0;bram@bram-VirtualBox: ~/ECE373/HW2[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373/HW2[00m$ sudpo [K[K[Ko ./a.out
+Value from the driver: 40
+Please type your favorite number: 100
+Value from the driver: 100
+
+Script done on 2020-04-22 18:09:35-0700

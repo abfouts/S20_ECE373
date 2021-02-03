@@ -1,0 +1,70 @@
+Script started on 2020-06-08 08:46:48-0700
+]0;root@bram-VirtualBox: /home/bramroot@bram-VirtualBox:/home/bram# uname -r
+5.6.17abfouts
+]0;root@bram-VirtualBox: /home/bramroot@bram-VirtualBox:/home/bram# cd /lib/modles/
+bash: cd: /lib/modles/: No such file or directory
+]0;root@bram-VirtualBox: /home/bramroot@bram-VirtualBox:/home/bram# cd /lib/modles/ules/
+]0;root@bram-VirtualBox: /lib/modulesroot@bram-VirtualBox:/lib/modules# cd 5.3.0-[K[K[K[K6.17abfouts/
+]0;root@bram-VirtualBox: /lib/modules/5.6.17abfoutsroot@bram-VirtualBox:/lib/modules/5.6.17abfouts# cd kernel/drivers/mids[K[Ksc/ece
+]0;root@bram-VirtualBox: /lib/modules/5.6.17abfouts/kernel/drivers/misc/eceroot@bram-VirtualBox:/lib/modules/5.6.17abfouts/kernel/drivers/misc/ece# ls
+hw6.ko
+]0;root@bram-VirtualBox: /lib/modules/5.6.17abfouts/kernel/drivers/misc/eceroot@bram-VirtualBox:/lib/modules/5.6.17abfouts/kernel/drivers/misc/ece# lsmod
+Module                  Size  Used by
+hw6                    16384  0
+intel_rapl_msr         20480  0
+intel_rapl_common      24576  1 intel_rapl_msr
+crct10dif_pclmul       16384  1
+crc32_pclmul           16384  0
+ghash_clmulni_intel    16384  0
+snd_intel8x0           45056  4
+snd_ac97_codec        139264  1 snd_intel8x0
+aesni_intel           372736  0
+ac97_bus               16384  1 snd_ac97_codec
+crypto_simd            16384  1 aesni_intel
+cryptd                 24576  2 crypto_simd,ghash_clmulni_intel
+snd_pcm               114688  2 snd_intel8x0,snd_ac97_codec
+glue_helper            16384  1 aesni_intel
+snd_seq_midi           20480  0
+snd_seq_midi_event     16384  1 snd_seq_midi
+vmwgfx                303104  3
+snd_rawmidi            36864  1 snd_seq_midi
+ttm                   106496  1 vmwgfx
+snd_seq                69632  2 snd_seq_midi,snd_seq_midi_event
+joydev                 24576  0
+drm_kms_helper        200704  1 vmwgfx
+intel_rapl_perf        20480  0
+cec                    53248  1 drm_kms_helper
+snd_seq_device         16384  3 snd_seq,snd_seq_midi,snd_rawmidi
+drm                   528384  6 vmwgfx,drm_kms_helper,ttm
+snd_timer              36864  2 snd_seq,snd_pcm
+fb_sys_fops            16384  1 drm_kms_helper
+syscopyarea            16384  1 drm_kms_helper
+sysfillrect            16384  1 drm_kms_helper
+snd                    90112  15 snd_seq,snd_seq_device,snd_intel8x0,snd_timer,snd_ac97_codec,snd_pcm,snd_rawmidi
+sysimgblt              16384  1 drm_kms_helper
+soundcore              16384  1 snd
+input_leds             16384  0
+serio_raw              20480  0
+mac_hid                16384  0
+sch_fq_codel           20480  2
+parport_pc             40960  0
+ppdev                  24576  0
+lp                     20480  0
+parport                53248  3 parport_pc,lp,ppdev
+ip_tables              32768  0
+x_tables               45056  1 ip_tables
+autofs4                45056  2
+hid_generic            16384  0
+usbhid                 53248  0
+hid                   131072  2 usbhid,hid_generic
+video                  49152  0
+psmouse               151552  0
+ahci                   40960  1
+e1000                 139264  0
+libahci                32768  1 ahci
+i2c_piix4              28672  0
+pata_acpi              16384  0
+]0;root@bram-VirtualBox: /lib/modules/5.6.17abfouts/kernel/drivers/misc/eceroot@bram-VirtualBox:/lib/modules/5.6.17abfouts/kernel/drivers/misc/ece# exit
+exit
+
+Script done on 2020-06-08 08:48:13-0700

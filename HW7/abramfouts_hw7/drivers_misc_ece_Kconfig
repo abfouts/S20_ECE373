@@ -1,0 +1,11 @@
+# SPDX-License-Identifier: GPL-2.0-only
+#
+# Misc strange devices
+#
+
+config ECE
+	tristate "HW7 my own driver"
+	depends on PCI
+	help
+		This is a PCI driver that blinks LED's whenever an interrupt happens
+		and those happen when packets are being sent!

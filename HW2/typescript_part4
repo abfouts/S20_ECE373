@@ -1,0 +1,22 @@
+Script started on 2020-04-22 18:17:11-0700
+]0;bram@bram-VirtualBox: ~/ECE373/HW2[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373/HW2[00m$ sudo rmmod hw2
+[sudo] password for bram: 
+]0;bram@bram-VirtualBox: ~/ECE373/HW2[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373/HW2[00m$ sui[Kdo insmod hw2.ko usrVar=97
+]0;bram@bram-VirtualBox: ~/ECE373/HW2[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373/HW2[00m$ dms[Kesg | tail
+[ 4946.175200] Allocated 1 devices at major: 241
+[ 4973.966711] successfully opened!
+[ 4973.966712] We are in charDev_read
+[ 4973.966713] User got from us 55
+[ 4979.094529] We are in charDev_write
+[ 4979.094530] Userspace wrote "10" to us
+[ 4979.094531] We are in charDev_read
+[ 5318.346052] Abram_Fouts_HW2 module unloaded!
+[ 5330.393042] Abram_Fouts_HW2 module loading... syscall_val=0
+[ 5330.393043] Allocated 1 devices at major: 241
+]0;bram@bram-VirtualBox: ~/ECE373/HW2[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373/HW2[00m$ sudo ./a.ouit[K[Kt
+Value from the driver: 97
+Please type your favorite number: 420
+Value from the driver: 420
+]0;bram@bram-VirtualBox: ~/ECE373/HW2[01;32mbram@bram-VirtualBox[00m:[01;34m~/ECE373/HW2[00m$ exit
+
+Script done on 2020-04-22 18:18:03-0700
